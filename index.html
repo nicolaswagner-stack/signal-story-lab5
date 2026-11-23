@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d19">
+  <meta name="description" content="Signal & Story is a concept studio combining artificial intelligence and human creativity to build smarter marketing experiences.">
+  <title>Signal & Story — Marketing, made meaningful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Signal and Story home">
+      <span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>signal<span class="brand-amp">&</span>story<span class="brand-period">.</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" aria-current="page" href="index.html">Home</a>
+      <a href="about.html">Our approach</a>
+      <button class="nav-chat" type="button" data-open-chat>Ask our assistant <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero content-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> THE HUMAN SIDE OF INTELLIGENCE</div>
+        <h1 id="hero-title">Less noise.<br><span class="gradient-text">More meaning.</span></h1>
+        <p class="lead">We connect the precision of AI with the instincts of great marketing. Discover what your audience needs. Create what they actually care about.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="about.html">Explore our approach <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#campaign-lab">Try the campaign lab <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-detail"><span class="detail-line"></span> A CONCEPT FOR TOMORROW'S MARKETING</div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-top"><span class="live-pill"><span></span> AI-GENERATED MOTION</span><span>001 / SIGNAL FORM</span></div>
+        <video id="hero-video" class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-label="Five-second AI-generated animated glass sculpture symbolizing marketing intelligence">
+          <source src="hero.mp4" type="video/mp4">
+          Your browser doesn't support HTML5 video.
+        </video>
+        <div class="visual-bottom"><span>TURNING COMPLEXITY INTO CLARITY</span><span class="video-meta">00:05 · LOOPING</span></div>
+      </div>
+    </section>
+
+    <section class="section services-section content-width" aria-labelledby="services-title">
+      <div class="section-heading"><div><p class="kicker">WHAT WE EXPLORE</p><h2 id="services-title">A better signal changes <em>everything.</em></h2></div><p class="section-aside">An integrated approach to audience insight, campaign design, and intelligent optimization.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-number">01 / INSIGHT</div><div class="service-icon" aria-hidden="true">✳</div><h3>Know your audience</h3><p>Use AI-assisted research to identify patterns, motivations, and unmet needs—without reducing people to numbers.</p><span class="service-foot">AUDIENCE INTELLIGENCE</span></article>
+        <article class="service-card"><div class="service-number">02 / CREATIVE</div><div class="service-icon" aria-hidden="true">✦</div><h3>Make ideas matter</h3><p>Translate research into sharper messaging, thoughtful brand stories, and campaign concepts that resonate.</p><span class="service-foot">CREATIVE STRATEGY</span></article>
+        <article class="service-card"><div class="service-number">03 / GROWTH</div><div class="service-icon" aria-hidden="true">↗</div><h3>Learn, then evolve</h3><p>Explore marketing automation, structured experimentation, and measurement that makes every next move smarter.</p><span class="service-foot">INTELLIGENT OPTIMIZATION</span></article>
+      </div>
+    </section>
+
+    <section id="campaign-lab" class="section content-width lab-section" aria-labelledby="lab-title">
+      <div class="lab-intro"><p class="kicker">THE INTERACTIVE EXPERIENCE</p><h2 id="lab-title">Let's spark an <span class="gradient-text">idea.</span></h2><p>Choose a business, objective, and tone. Our live concept generator gives you a sample campaign direction on the spot.</p><div class="lab-mini"><span class="tiny-star">✺</span> Built for experimentation, not performance promises.</div></div>
+      <div class="lab-tool">
+        <div class="tool-title"><span><span class="tool-status"></span> CAMPAIGN SPARK</span><span>INTERACTIVE / 01</span></div>
+        <form id="campaign-form">
+          <div class="form-fields">
+            <label for="industry">Your industry<select id="industry" name="industry"><option value="hospitality">Hotels & hospitality</option><option value="retail">Retail & e-commerce</option><option value="wellness">Health & wellness</option><option value="services">Professional services</option></select></label>
+            <label for="goal">Your goal<select id="goal" name="goal"><option value="awareness">Reach new people</option><option value="engagement">Build engagement</option><option value="loyalty">Inspire loyalty</option></select></label>
+            <label for="tone">Brand personality<select id="tone" name="tone"><option value="bold">Bold & energetic</option><option value="warm">Warm & personal</option><option value="refined">Refined & premium</option></select></label>
+          </div>
+          <button class="button button-primary generate-button" type="submit">Generate campaign idea <span aria-hidden="true">✦</span></button>
+        </form>
+        <div class="idea-output" id="idea-output" aria-live="polite">
+          <div class="idea-overline">YOUR CONCEPT <span>✦</span></div>
+          <h3 id="idea-headline">Stay somewhere worth remembering.</h3>
+          <p id="idea-explanation">Build discovery around meaningful moments, then invite new guests to picture themselves in the experience.</p>
+          <div class="idea-meta"><div><span>AUDIENCE CHANNELS</span><strong id="idea-channels">Instagram Reels · Search · Email</strong></div><div><span>CREATIVE DIRECTION</span><strong id="idea-visual">Cinematic storytelling</strong></div></div>
+          <button id="copy-idea" class="copy-button" type="button">Copy campaign brief <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section content-width"><p class="kicker">THE NEXT CHAPTER</p><div class="closing-row"><h2>Better technology.<br><span class="outline-heading">More human ideas.</span></h2><a class="button button-outline" href="about.html">Discover the thinking <span aria-hidden="true">↗</span></a></div></section>
+    <div class="xfactor-note content-width"><strong>X-Factor:</strong> The interactive Campaign Spark lets visitors select an industry, marketing goal, and brand personality to instantly create a sample headline, messaging approach, channel plan, and creative direction. It turns the website into a practical, hands-on experience.</div>
+  </main>
+
+  <footer class="site-footer content-width"><div class="footer-left"><span class="footer-brand">signal<span class="brand-amp">&</span>story<span class="brand-period">.</span></span><span>A student-created business concept exploring AI and marketing.</span></div><div class="footer-right"><a href="index.html">Home</a><a href="about.html">Our approach</a><span>© 2026 Signal & Story</span></div></footer>
+
+  <button id="chat-launcher" class="chat-launcher" type="button" aria-label="Open Signal and Story chatbot" aria-expanded="false" aria-controls="chat-panel"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.4 0-2.7-.3-3.9-.9L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 11h8M8 14h5"/></svg><span>Ask Nova</span></button>
+  <section id="chat-panel" class="chat-panel" aria-label="Nova chatbot" hidden><div class="chat-top"><div class="chat-avatar">✦</div><div class="chat-heading"><strong>Nova</strong><span><span class="online-dot"></span> Signal & Story assistant</span></div><button id="chat-close" type="button" aria-label="Close chatbot">×</button></div><div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions"></div><div class="chat-chips" id="chat-chips"><button type="button" data-chat-prompt="What services do you offer?">Services</button><button type="button" data-chat-prompt="How do you use AI?">How we use AI</button><button type="button" data-chat-prompt="How does Campaign Spark work?">Campaign Spark</button></div><form id="chat-form" class="chat-form"><input id="chat-input" type="text" maxlength="350" placeholder="Ask me anything about the studio..." aria-label="Your message" required autocomplete="off"><button type="submit" aria-label="Send message">➤</button></form><div class="chat-disclaimer">Interactive demo chatbot · no messages are sent to a server</div></section>
+</body>
+</html>
